@@ -2,46 +2,58 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>JinHauPianoHome</title>
     <meta name="author" content="黃勁豪">
-    <link rel="stylesheet" type="text/css" href="HomeStyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>SoftwareEngineerRelanxing</title>
+    <!-- HomeStyles.css 連結 -->
+    <link rel="stylesheet" href="HomeStyles.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d295983da4.js" crossorigin="anonymous"></script>
     <script src="HomeScript.js"></script>
-
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="header">
-                <h2 class="logo">JinHauPiano</h2>
-                <!-- <input type="checkbox" id="chk">
-                <label for="chk" class="show-menu-btn" onclick="menubarFunction(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </label> -->
-                <ul class="menu">
-                    <li class="tab"><a href="#" target="_parent">PianoSheet</a></li>
-                    <li class="tab"><a href="#" target="_parent">Contact</a></li>
-                    <li class="tab"><a href="#" target="_parent">FAQ</a></li>
-                    <li class="tab"><a href="#" target="_parent">About Me</a></li>
-                    <li class="dropdown">
-                        <a class="dropbtn" href="#" target="_parent">Language</a>
-                        <div class="dropdown-content">
-                            <a href="#">中文</a>
-                            <a href="#">English</a>
-                            <a href="#">日本語</a>
-                        </div>
-                    </li>
-
-                    <li class="tab"><a href="Login/Login.html">Login</a></li>
-                </ul>
-            </div>
-        </nav>
+    <!-- header home top label -->
+    <header id="header">
+        <a href="#" class="logo">Relanxing</a>
+        <ul>
+            <li><a href="#" onclick="toggle()">PianoSheet</a></li>
+            <li><a href="#" onclick="toggle()">PianoTutorial</a></li>
+            <li><a href="#" onclick="toggle()">FAQ</a></li>
+            <li><a href="#" onclick="toggle()">Biography</a></li>
+            <!-- <li><a href="#" onclick="toggle()">Language</a></li> -->
+            <li class="dropdown">
+                <a class="dropbtn" href="#" onclick="toggle()">Language</a>
+                <div class="dropdown-content">
+                    <a href="#">中文</a>
+                    <a href="#">English</a>
+                    <a href="#">日本語</a>
+                </div>
+            <li><a href="#" onclick="toggle()">Contact</a></li>
+            <li><a href="Login/Login.html" onclick="toggle()">Login</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
     </header>
+    <section id="home">
+        <div>
+            <h2>Releaxing Piano For Listening</h2>
+            <p>
+                Music can be more than pure entertainment.
+                I create tunes that can positively impact our environment,
+                the way we feel,
+                work and how we treat each other.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+        <img src="img/SteinwayPianoImg.jpeg">
+    </section>
+    <script type="text/javascript">
+        function toggle() {
+            var header = document.getElementById("header")
+            header.classList.toggle('active')
+        }
+    </script>
 </body>
 
 </html>
